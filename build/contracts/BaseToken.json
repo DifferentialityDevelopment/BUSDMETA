@@ -1,0 +1,453 @@
+{
+  "contractName": "BaseToken",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum Common.TokenType",
+          "name": "tokenType",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "version",
+          "type": "uint256"
+        }
+      ],
+      "name": "TokenCreated",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"enum Common.TokenType\",\"name\":\"tokenType\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"version\",\"type\":\"uint256\"}],\"name\":\"TokenCreated\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/BaseToken.sol\":\"BaseToken\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/BaseToken.sol\":{\"keccak256\":\"0xad88b6fa91e0e9a37edc1763bd668ef8bfc357f69963ee04176c822fa82b5c16\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2bd9299649eadc99730b0adae4363985cbe88e006ca245423683200f06688c46\",\"dweb:/ipfs/QmfCSrMfwA46rRv5igXCdXqseY4noXAuPMNa2DFRx4vYC6\"]},\"project:/contracts/Common.sol\":{\"keccak256\":\"0xeb8525f302ceac39af251440a57ea3a695c88c50a2de978f8a736fb0ab90b24c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f87efd196e6f7a9abae336429666388088f3da5988d75db69d36c64ff1dcd695\",\"dweb:/ipfs/QmNP1yavASFTvqr3yJrY5JYJHa7A1oqGrF8gJPnnpiTRcX\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "//SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.0;\r\n\r\nimport \"./Common.sol\";\r\n\r\nabstract contract BaseToken {\r\n    event TokenCreated(\r\n        address indexed owner,\r\n        address indexed token,\r\n        Common.TokenType tokenType,\r\n        uint256 version\r\n    );\r\n}",
+  "sourcePath": "C:\\Users\\azamo\\OneDrive\\Projects\\BUSDMETA\\contracts\\BaseToken.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/BaseToken.sol",
+    "exportedSymbols": {
+      "BaseToken": [
+        1788
+      ],
+      "Common": [
+        1880
+      ]
+    },
+    "id": 1789,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1775,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "34:23:2"
+      },
+      {
+        "absolutePath": "project:/contracts/Common.sol",
+        "file": "./Common.sol",
+        "id": 1776,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1789,
+        "sourceUnit": 1881,
+        "src": "61:22:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1788,
+        "linearizedBaseContracts": [
+          1788
+        ],
+        "name": "BaseToken",
+        "nameLocation": "105:9:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 1787,
+            "name": "TokenCreated",
+            "nameLocation": "128:12:2",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1786,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1778,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "167:5:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1787,
+                  "src": "151:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1777,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "151:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1780,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "199:5:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1787,
+                  "src": "183:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1779,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "183:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1783,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenType",
+                  "nameLocation": "232:9:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1787,
+                  "src": "215:26:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TokenType_$1879",
+                    "typeString": "enum Common.TokenType"
+                  },
+                  "typeName": {
+                    "id": 1782,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1781,
+                      "name": "Common.TokenType",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1879,
+                      "src": "215:16:2"
+                    },
+                    "referencedDeclaration": 1879,
+                    "src": "215:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TokenType_$1879",
+                      "typeString": "enum Common.TokenType"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1785,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "version",
+                  "nameLocation": "260:7:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1787,
+                  "src": "252:15:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1784,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "252:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "140:134:2"
+            },
+            "src": "122:153:2"
+          }
+        ],
+        "scope": 1789,
+        "src": "87:191:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "34:244:2"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/BaseToken.sol",
+    "exportedSymbols": {
+      "BaseToken": [
+        1788
+      ],
+      "Common": [
+        1880
+      ]
+    },
+    "id": 1789,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1775,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "34:23:2"
+      },
+      {
+        "absolutePath": "project:/contracts/Common.sol",
+        "file": "./Common.sol",
+        "id": 1776,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1789,
+        "sourceUnit": 1881,
+        "src": "61:22:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1788,
+        "linearizedBaseContracts": [
+          1788
+        ],
+        "name": "BaseToken",
+        "nameLocation": "105:9:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 1787,
+            "name": "TokenCreated",
+            "nameLocation": "128:12:2",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1786,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1778,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "167:5:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1787,
+                  "src": "151:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1777,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "151:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1780,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "199:5:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1787,
+                  "src": "183:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1779,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "183:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1783,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenType",
+                  "nameLocation": "232:9:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1787,
+                  "src": "215:26:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TokenType_$1879",
+                    "typeString": "enum Common.TokenType"
+                  },
+                  "typeName": {
+                    "id": 1782,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1781,
+                      "name": "Common.TokenType",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1879,
+                      "src": "215:16:2"
+                    },
+                    "referencedDeclaration": 1879,
+                    "src": "215:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TokenType_$1879",
+                      "typeString": "enum Common.TokenType"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1785,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "version",
+                  "nameLocation": "260:7:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1787,
+                  "src": "252:15:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1784,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "252:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "140:134:2"
+            },
+            "src": "122:153:2"
+          }
+        ],
+        "scope": 1789,
+        "src": "87:191:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "34:244:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.4+commit.c7e474f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-27T02:02:51.984Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,732 @@
+{
+  "contractName": "IDividendDistributor",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_minPeriod",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_minDistribution",
+          "type": "uint256"
+        }
+      ],
+      "name": "setDistributionCriteria",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "shareholder",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "setShare",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "gas",
+          "type": "uint256"
+        }
+      ],
+      "name": "process",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"gas\",\"type\":\"uint256\"}],\"name\":\"process\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_minPeriod\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_minDistribution\",\"type\":\"uint256\"}],\"name\":\"setDistributionCriteria\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"shareholder\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"setShare\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IDividendDistributor.sol\":\"IDividendDistributor\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IDividendDistributor.sol\":{\"keccak256\":\"0x5f0389af8e17e83d1159c861fdd0b4d76aadffd962b48a89c32494e635112326\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://289c1ac43a571b8ccdcdfff2e3de3fc9137c3c2ba0c04d6e1d92b859e641730a\",\"dweb:/ipfs/QmY3dxsA2FYck7wT5iw22DJwwk2joMtFesK57pEm7jgnrr\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "//SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.0;\r\n\r\ninterface IDividendDistributor {\r\n    function setDistributionCriteria(\r\n        uint256 _minPeriod,\r\n        uint256 _minDistribution\r\n    ) external;\r\n\r\n    function setShare(address shareholder, uint256 amount) external;\r\n\r\n    function deposit() external payable;\r\n\r\n    function process(uint256 gas) external returns (uint256);\r\n}",
+  "sourcePath": "C:\\Users\\azamo\\OneDrive\\Projects\\BUSDMETA\\contracts\\IDividendDistributor.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/IDividendDistributor.sol",
+    "exportedSymbols": {
+      "IDividendDistributor": [
+        2583
+      ]
+    },
+    "id": 2584,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2558,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "34:23:6"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 2583,
+        "linearizedBaseContracts": [
+          2583
+        ],
+        "name": "IDividendDistributor",
+        "nameLocation": "71:20:6",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "2d48e896",
+            "id": 2565,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setDistributionCriteria",
+            "nameLocation": "108:23:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2563,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2560,
+                  "mutability": "mutable",
+                  "name": "_minPeriod",
+                  "nameLocation": "150:10:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2565,
+                  "src": "142:18:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2559,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "142:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2562,
+                  "mutability": "mutable",
+                  "name": "_minDistribution",
+                  "nameLocation": "179:16:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2565,
+                  "src": "171:24:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2561,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "171:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "131:71:6"
+            },
+            "returnParameters": {
+              "id": 2564,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "211:0:6"
+            },
+            "scope": 2583,
+            "src": "99:113:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "14b6ca96",
+            "id": 2572,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setShare",
+            "nameLocation": "229:8:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2570,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2567,
+                  "mutability": "mutable",
+                  "name": "shareholder",
+                  "nameLocation": "246:11:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2572,
+                  "src": "238:19:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2566,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2569,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "267:6:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2572,
+                  "src": "259:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2568,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "259:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "237:37:6"
+            },
+            "returnParameters": {
+              "id": 2571,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "283:0:6"
+            },
+            "scope": 2583,
+            "src": "220:64:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "d0e30db0",
+            "id": 2575,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "301:7:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2573,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "308:2:6"
+            },
+            "returnParameters": {
+              "id": 2574,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "327:0:6"
+            },
+            "scope": 2583,
+            "src": "292:36:6",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "ffb2c479",
+            "id": 2582,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "process",
+            "nameLocation": "345:7:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2578,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2577,
+                  "mutability": "mutable",
+                  "name": "gas",
+                  "nameLocation": "361:3:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2582,
+                  "src": "353:11:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2576,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "353:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "352:13:6"
+            },
+            "returnParameters": {
+              "id": 2581,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2580,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2582,
+                  "src": "384:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2579,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "384:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "383:9:6"
+            },
+            "scope": 2583,
+            "src": "336:57:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2584,
+        "src": "61:335:6",
+        "usedErrors": []
+      }
+    ],
+    "src": "34:362:6"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/IDividendDistributor.sol",
+    "exportedSymbols": {
+      "IDividendDistributor": [
+        2583
+      ]
+    },
+    "id": 2584,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2558,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "34:23:6"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 2583,
+        "linearizedBaseContracts": [
+          2583
+        ],
+        "name": "IDividendDistributor",
+        "nameLocation": "71:20:6",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "2d48e896",
+            "id": 2565,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setDistributionCriteria",
+            "nameLocation": "108:23:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2563,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2560,
+                  "mutability": "mutable",
+                  "name": "_minPeriod",
+                  "nameLocation": "150:10:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2565,
+                  "src": "142:18:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2559,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "142:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2562,
+                  "mutability": "mutable",
+                  "name": "_minDistribution",
+                  "nameLocation": "179:16:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2565,
+                  "src": "171:24:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2561,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "171:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "131:71:6"
+            },
+            "returnParameters": {
+              "id": 2564,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "211:0:6"
+            },
+            "scope": 2583,
+            "src": "99:113:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "14b6ca96",
+            "id": 2572,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setShare",
+            "nameLocation": "229:8:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2570,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2567,
+                  "mutability": "mutable",
+                  "name": "shareholder",
+                  "nameLocation": "246:11:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2572,
+                  "src": "238:19:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2566,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2569,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "267:6:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2572,
+                  "src": "259:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2568,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "259:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "237:37:6"
+            },
+            "returnParameters": {
+              "id": 2571,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "283:0:6"
+            },
+            "scope": 2583,
+            "src": "220:64:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "d0e30db0",
+            "id": 2575,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "301:7:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2573,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "308:2:6"
+            },
+            "returnParameters": {
+              "id": 2574,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "327:0:6"
+            },
+            "scope": 2583,
+            "src": "292:36:6",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "ffb2c479",
+            "id": 2582,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "process",
+            "nameLocation": "345:7:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2578,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2577,
+                  "mutability": "mutable",
+                  "name": "gas",
+                  "nameLocation": "361:3:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2582,
+                  "src": "353:11:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2576,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "353:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "352:13:6"
+            },
+            "returnParameters": {
+              "id": 2581,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2580,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2582,
+                  "src": "384:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2579,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "384:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "383:9:6"
+            },
+            "scope": 2583,
+            "src": "336:57:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2584,
+        "src": "61:335:6",
+        "usedErrors": []
+      }
+    ],
+    "src": "34:362:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.4+commit.c7e474f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-27T02:02:52.012Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
